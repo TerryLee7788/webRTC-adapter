@@ -1,0 +1,21 @@
+{
+  "name": "webRTC-adapter",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "fabric": "^5.2.1",
+    "fabricjs-react": "^1.0.8",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "tesseract.js": "^2.1.5",
+    "three": "^0.139.2",
+    "three.ar.js": "^0.1.8"
+  },
+  "devDependencies": {
+    "vite": "^1.0.0-rc.13",
+    "vite-plugin-react": "^4.0.0"
+  }
+}

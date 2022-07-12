@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #000;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  font-size: calc(10px + 2vmin);
+}
+/*
+video {
+  transform: scale(-1, 1);
+}
+*/
+.wrap,
+.mask {
+  position: relative;
+}
+.wrap {
+  margin-top: 40px;
+}
+.mask::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.3);
+}
+.tool-bar {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.result {
+  visibility: hidden;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform .2s linear;
+  background-color: #000;
+  /* padding-top: 50px; */
+}
+.undo {
+  margin: 20px 10px 0;
+}
+.showResult {
+  visibility: visible;
+  transform: translateY(0);
+}
+.loading {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff
+}
+.startCameraBtn {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.cameraShutter {
+  position: relative;
+  background-color: #fdfdfd;
+  width: 60px;
+  height: 60px;
+  margin: 20px auto 0;
+  border-radius: 50%;
+}
+.cameraShutter::before {
+  position: absolute;
+  content: '';
+  width: 110%;
+  height: 110%;
+  left: -10%;
+  top: -10%;
+  border: 3px solid #fdfdfd;
+  border-radius: 50%;
+}
+.scale {
+  transform: scale(-1, 1);
+}
+.canvas-wrap {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+}
+.imgWrap {
+  display: flex;
+}
+.imgWrap img {
+  width: 40px;
+  margin: 5px;
+}
